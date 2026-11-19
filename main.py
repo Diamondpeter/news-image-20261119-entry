@@ -18,12 +18,13 @@ from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 SOURCE_IMAGE = HERE / "entry.png"
+ENTRY_NAME = "entry.png"
 
 
 def output_path() -> Path:
     """Return where the grader expects the image to be written."""
     out_dir = Path(os.environ.get("MAKEFUN_OUTPUT_DIR", "/output"))
-    return out_dir / "entry.png"
+    return out_dir / ENTRY_NAME
 
 
 def main() -> None:
